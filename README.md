@@ -6,4 +6,4 @@ The repository was created for laboratory students from the course "Administrati
 
 ## Author
 
-- Arsen Kapanaiko, IT-31, National University Lviv Polytechnic
+- Arsen Kapanaiko, student of IT-31 group, National University Lviv Polytechnic
