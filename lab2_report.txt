@@ -1,0 +1,13 @@
+Using /etc/ansible/ansible.cfg as config file
+
+PLAY [update /etc/hostname] ****************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [13.60.19.115]
+
+TASK [update /etc/hostname] ****************************************************
+ok: [13.60.19.115] => {"backup": "", "changed": false, "msg": ""}
+
+PLAY RECAP *********************************************************************
+13.60.19.115               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+

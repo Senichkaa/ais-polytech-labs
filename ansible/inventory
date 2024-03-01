@@ -1,0 +1,2 @@
+[aws_linux]
+13.60.19.115 ansible_user=ubuntu ansible_ssh_private_key_file=~/ans/virtualmachine.pem
