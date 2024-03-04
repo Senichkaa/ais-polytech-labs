@@ -1,0 +1,16 @@
+Using /etc/ansible/ansible.cfg as config file
+
+PLAY [update /etc/hostname] ****************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [13.53.143.232]
+
+TASK [update /etc/hostname] ****************************************************
+changed: [13.53.143.232] => {"backup": "", "changed": true, "msg": "line replaced"}
+
+RUNNING HANDLER [Restart hostname] *********************************************
+changed: [13.53.143.232] => {"changed": true, "cmd": "hostnamectl set-hostname arsen-kapanaiko-lab2", "delta": "0:00:00.106682", "end": "2024-03-04 10:24:04.297307", "msg": "", "rc": 0, "start": "2024-03-04 10:24:04.190625", "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+
+PLAY RECAP *********************************************************************
+13.53.143.232              : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+

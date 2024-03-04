@@ -1,0 +1,14 @@
+---
+- name: update /etc/hostname
+  hosts: aws_linux
+  become: yes
+  tasks:
+    - name: update /etc/hostname
+      lineinfile:
+        path: /etc/hostname
+        regexp: '^.*$'
+        line: 'arsen-kapanaiko-lab2'
+      notify: Restart hostname
+  handlers:
+    - name: Restart hostname
+      ansible.builtin.shell: hostnamectl set-hostname arsen-kapanaiko-lab2
