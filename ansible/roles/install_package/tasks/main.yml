@@ -1,0 +1,24 @@
+- name: Determine package manager
+  set_fact:
+    package_manager: "{{ 'apt' if ansible_pkg_mgr == 'apt' else 'dnf' }}"
+
+- debug:
+    msg: "Detected Linux distribution: {{ ansible_distribution }}. Used: {{ package_manager }} ."
+
+- name: Install package
+  package:
+    name: "{{ package_name }}"
+    state: present
+  when: package_manager == 'apt'
+
+- name: Install package
+  ansible.builtin.dnf:
+    name: "{{ package_name }}"
+    state: present
+  when: package_manager == 'dnf'
+
+- name: Ensure Nginx service is started and enabled
+  service:
+    name: nginx
+    state: started
+    enabled: yes

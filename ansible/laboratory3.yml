@@ -1,0 +1,9 @@
+- hosts: aws_linux  
+  become: yes  
+  roles:
+    - { role: install_package, package_name: "nginx" }
+
+- hosts: ubuntu_linux  
+  become: yes  
+  roles:
+    - { role: install_package, package_name: "nginx" }  

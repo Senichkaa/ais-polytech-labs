@@ -1,2 +1,5 @@
 [aws_linux]
 13.53.143.232 ansible_user=ubuntu ansible_ssh_private_key_file=~/keys/vm.pem
+
+[ubuntu_linux]
+51.20.37.158 ansible_user=ubuntu ansible_ssh_private_key_file=~/keys/vm.pem
